@@ -8,6 +8,11 @@ import { RegistrationComponent } from './registration/registration.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatTabsModule} from '@angular/material/tabs';
 import { DashboardComponent } from './dashboard/dashboard.component'; 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HomePageComponent } from './home-page/home-page.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { FeedbackWriteComponent } from './feedback-write/feedback-write.component';
 
 @NgModule({
   declarations: [
@@ -15,13 +20,19 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     LoginComponent,
     RegistrationComponent,
     DashboardComponent,
-    routingComponents
+    routingComponents,
+    HomePageComponent,
+    NavbarComponent,
+    FeedbackComponent,
+    FeedbackWriteComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatTabsModule
+    MatTabsModule,
+    FormsModule,
+    ReactiveFormsModule 
     
   ],
   providers: [],

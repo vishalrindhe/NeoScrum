@@ -1,19 +1,84 @@
-<div class="example-small-box" >
+<div class="example-small-box" ngForm #registrationForm="ngForm">
   
-    <div class="input-group">
-      <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
-      <input type="text" class="form-control" placeholder="Employee Name" aria-label="Username" aria-describedby="basic-addon1">    
-    </div>
-    <div class="input-group">
-      <input type="text" class="form-control" placeholder="Email" aria-label="Email" aria-describedby="basic-addon1">
-    </div>
-    <div class="input-group">
-        <input type="file" class="form-control input1" placeholder="file" aria-label="Email" aria-describedby="basic-addon1">
-      </div>
-      <!-- <div class="input-group mb-3">
-        <label class="input-group-text" for="inputGroupFile01">Upload</label>
-        <input type="file" class="form-control input1" id="inputGroupFile01">
-      </div> -->
+  <div class="input-group form-group">
+    <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
+    <input type="text" 
+          #employeeName="ngModel"
+          [(ngModel)] = "userModel.employeeName"
+          class="form-control" 
+          placeholder="Employee Name" 
+          pattern="^[a-zA-Z]{1,20}$"
+          id="employeeName"
+          name="employeeName" 
+          required
+          minlength="3"
+          maxlength="20"
+          [class.is-invalid]="employeeName.invalid && employeeName.touched">    
+  </div>
 
-    <button type="button" class="btn btn-warning">SUBMIT</button>
+  <!-- error msg display for Username field -->
+  <div *ngIf="employeeName.errors && (employeeName.dirty || employeeName.touched)">
+    <span style="color: red; margin: 0.5%;"[hidden]="!employeeName.errors.required">
+      employeeName is required 
+    </span>
+    <span style="color: red;margin: 0.5%" [hidden]="!employeeName.errors.pattern">
+      Only alphabets allowed.
+    </span>
+    <span style="color: red;margin: 0.5%;" [hidden]="!employeeName.errors.minlength">
+      Please Enter Atleast 3 Characters
+    </span>
+    </div>
+ 
+    <!-- Employee Email -->
+    <div class="input-group form-group">
+      <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
+      <input type="text" 
+            #email="ngModel"
+            [(ngModel)] = "userModel.email"
+            class="form-control" 
+            placeholder="Employee Name" 
+            pattern="^\D([a-zA-Z0-9+_.-])+[@]+[a-zA-Z0-9]+[.]+[a-z]{2,4}$"
+            id="email"
+            name="email" 
+            required
+            minlength="8"
+            maxlength="20"
+            [class.is-invalid]="email.invalid && email.touched">    
+    </div>
+  
+    <!-- error msg display for Username field -->
+    <div *ngIf="email.errors && (email.dirty || email.touched)">
+      <span style="color: red; margin: 0.5%;"[hidden]="!email.errors.required">
+        email is required 
+      </span>
+      <span style="color: red;margin: 0.5%" [hidden]="!email.errors.pattern">
+        Only alphabets allowed.
+      </span>
+      <!-- <span style="color: red;margin: 0.5%;" [hidden]="!email.errors.minlength">
+        Please Enter Atleast 3 Characters
+      </span> -->
+      </div>
+ 
+
+      <!-- Files type -->
+      <div class="input-group">
+        <input type="file"
+                accept=".png, .jpg, .jpeg"
+                class="form-control input1"
+                placeholder="file"
+                required
+                >
+                <!-- #pic="ngModel"
+                [(ngModel)] = "userModel.pic"
+                [class.is-invalid]="pic.invalid && pic.touched" -->
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" 
+      class="btn btn-warning"
+      [disabled]="registrationForm.form.invalid"
+      routerLink='/dashboard'>
+      SUBMIT
+</button>
+
   </div>

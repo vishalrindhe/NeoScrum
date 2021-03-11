@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { RegistrationClass } from '../registration-class';
 
 @Component({
   selector: 'app-registration',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
+
+  userModel = new RegistrationClass("","")
 
   constructor() { }
 

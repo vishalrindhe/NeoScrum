@@ -1,16 +1,78 @@
-<div><div class="example-small-box " style="align-items: center;">
-  
-    <div class="input-group">
-      <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
-      <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">    
-    </div>
-    <div class="input-group">
-      <input type="password" class="form-control" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1">
-    </div>
-      
+<div>
+  <div class="example-small-box " style="align-items: center;" ngForm #loginForm="ngForm">
+    <!-- Name field -->
+<!-- 
+    <div class="form-group">
+      <label >UserName</label>
+    </div> -->
+    <div class="input-group form-group">
 
-    <button type="button" class="btn btn-warning" routerLink="/registration" href="<app-registration></app-registration>">SUBMIT</button>
-    <!-- <button type="button" class="btn btn-warning" >SUBMIT</button> -->
+      <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
+      <input type="text" 
+            #name="ngModel"
+            [(ngModel)] = "userModel.name"
+            class="form-control" 
+            placeholder="Username" 
+            pattern="^[a-zA-Z]{1,20}$"
+            id="name"
+            name="name" 
+            required
+            minlength="3"
+            maxlength="20"
+            [class.is-invalid]="name.invalid && name.touched">    
+    </div>
+
+    <!-- error msg display for Username field -->
+    <div *ngIf="name.errors && (name.dirty || name.touched)">
+      <span style="color: red; margin: 0.5%;"[hidden]="!name.errors.required">
+        Name is required 
+      </span>
+      <span style="color: red;margin: 0.5%" [hidden]="!name.errors.pattern">
+        Only alphabets allowed.
+      </span>
+      <span style="color: red;margin: 0.5%;" [hidden]="!name.errors.minlength">
+        Please Enter Atleast 3 Characters
+      </span>
+      </div>
+   
+      <!-- Password field -->
+    <div class="input-group form-group">
+      <input type="password" 
+            #password="ngModel"
+            [(ngModel)] = "userModel.password"
+            class="form-control" 
+            placeholder="Password" 
+            pattern="^(?=.*\d)(?=.*[a-z A-Z]).{8,12}$"
+            id="password"
+            name="password" 
+            required
+            minlength="8"
+            maxlength="12"
+            [class.is-invalid]="password.invalid && password.touched">    
+    </div>
+    <!-- error msg display for password field -->
+    <div *ngIf="password.errors && (password.dirty || password.touched)">
+      <span style="color: red; margin: 0.5%;"[hidden]="!password.errors.required">
+        Password is required 
+      </span>
+      <span style="color: red;margin: 0.5%" [hidden]="!password.errors.pattern">
+          Password must be Alphnumeric.
+      </span>
+      <span style="color: red;margin: 0.5%;" [hidden]="!password.errors.minlength">
+        Please Enter Atleast 8 Characters
+      </span>
+      </div>
+
+      <!-- Submit Button -->
+    <button type="submit" 
+            class="btn btn-warning"
+            [disabled]="loginForm.form.invalid"
+            routerLink='/dashboard'
+            >
+            SUBMIT
+    </button>
+    <!-- <button type="submit" class="btn btn-warning"  routerLink='/dashboard'><a >SUBMIT</a></button> -->
+    <!-- <button type="button" class="btn btn-warning"  click)="btnClick()">SUBMIT</button> -->
 
   </div>
 </div>
