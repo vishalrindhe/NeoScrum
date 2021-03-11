@@ -1,0 +1,44 @@
+<!-- <div class="container">
+    <div class="card-deck">
+        <div class="card col-sm-4 col-lg-4 mb-4" *ngFor="let dummy of dummyList">
+            <div class="card-body">
+                <h4 class="card-title">{{dummy.name}}</h4>
+                <p class="card-text">{{dummy.feedback}}</p>
+            <p class="card-text"><small class="text-muted">{{dummy.updated}} minutes ago</small></p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card text-white bg-primary mb-3" style="max-width: 18rem;">
+    <div class="card-header">Header</div>
+    <div class="card-body">
+      <h5 class="card-title">Primary card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    </div>
+  </div> -->
+
+  <div class="container">
+    <div class="row">
+        <div class="col-sm-6 col-lg-4 card-margin" *ngFor="let feedback of feedBackList">
+            <div class="card border-primary card-bg" >
+                <div class="card-header">
+                        <div class="container text-below-textarea">
+                            <span class="card-text text-left" style="display:inline-block;text-align:left;">
+                                Feedback                    
+                            </span>
+                            <span class="card-text text-right" style="display:inline-block;text-align:right;">
+                                <small class="text-muted">in {{feedback.updated}} hours</small>
+                            </span>
+                        </div>  
+                </div>
+                <p class="card-text" style="padding: 9%;">{{feedback.feedback}}</p>
+
+                <span class="card-footer text-right" style="display:inline-block;text-align:right;">
+                    <small class="text-muted">sent by - {{feedback.name}}</small>
+                </span>        
+
+              </div>
+            </div>
+          </div>
+      </div>
+    

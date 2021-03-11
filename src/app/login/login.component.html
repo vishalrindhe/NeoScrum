@@ -1,13 +1,18 @@
 <div>
+  
   <div class="example-small-box " style="align-items: center;" ngForm #loginForm="ngForm">
     <!-- Name field -->
 <!-- 
     <div class="form-group">
       <label >UserName</label>
     </div> -->
+    
     <div class="input-group form-group">
-
+      <div class="input-group " style="text-align: center;">
+        <h1 style="text-align: center;">Login</h1>
+      </div>
       <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
+      
       <input type="text" 
             #name="ngModel"
             [(ngModel)] = "userModel.name"

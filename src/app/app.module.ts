@@ -13,6 +13,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FeedbackWriteComponent } from './feedback-write/feedback-write.component';
+import { FeedbackCardComponent } from './feedback-card/feedback-card.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { FeedbackWriteComponent } from './feedback-write/feedback-write.componen
     NavbarComponent,
     FeedbackComponent,
     FeedbackWriteComponent,
+    FeedbackCardComponent,
   ],
   imports: [
     BrowserModule,

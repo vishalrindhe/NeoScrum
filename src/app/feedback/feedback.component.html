@@ -1,19 +1,31 @@
-<nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
-    <a class="navbar-brand" href="#"><span class="neo">Neo</span><span class="scrum">Scrum</span></a>
+<nav class="navbar navbar-expand-lg  navbar-dark navbar-bg">
+    
+    <a class="navbar-brand" routerLink='/dashboard'>
+        <span class="neo">
+            <b>Neo</b>
+        </span>
+        <span class="scrum">
+            <b>Scrum</b>
+        </span>
+    </a>
+            <div class="navbar-brand">
+                <img class="profilePic" src="assets/img_avatar3.png" >                       
+              <span class="" href="#">Vishal Rindhe</span>
+            </div>  
+
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav home-page-nav">
-        <button type="button" class=" btn btn-dark my-2 mr-sm-4" routerLink="/dashboard">Back</button>
-        <button type="button" class="btn btn-danger mr-sm-4 " routerLink="/login"><div style="margin-left: 2%;margin-right: 2%;">Logout</div></button>   
+        <button type="button" class=" btn btn-outline-light my-2 mr-sm-4" routerLink="/dashboard">Back</button>
+        <button type="button" class="btn btn-danger my-2 mr-sm-4 " routerLink="/login">
+            <div style="margin-left: 2%;margin-right: 2%;">Logout</div>
+        </button>   
 
-    <!-- <a class="nav-link signup" routerLink="/login" style="color: red;">LogOut</a> -->
-
-
-    <!-- <a class="nav-link signup" routerLink="/login">LogOut</a> -->
     </div>
     </div>
 </nav>
+
 
 <app-feedback-write></app-feedback-write>
