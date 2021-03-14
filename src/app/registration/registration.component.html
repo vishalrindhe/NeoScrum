@@ -1,3 +1,35 @@
+<nav class="navbar navbar-expand-lg  navbar-dark navbar-bg">
+    
+  <a class="navbar-brand" routerLink='/dashboard'>
+      <span class="neo">
+          <b>Neo</b>
+      </span>
+      <span class="scrum">
+          <b>Scrum</b>
+      </span>
+  </a>
+          <!-- <div class="navbar-brand">
+              <img class="profilePic" src="assets/img_avatar3.png" >                       
+            <span class="" href="#">Vishal Rindhe</span>
+          </div>   -->
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="navbar-nav home-page-nav">
+      <button type="button" class=" btn btn-outline-light my-2 mr-sm-4" routerLink="/login">Login</button>
+      <!-- <button type="button" class="btn btn-danger my-2 mr-sm-4 " routerLink="/login">
+          <div style="margin-left: 2%;margin-right: 2%;">Logout</div> -->
+      <!-- </button>    -->
+
+  </div>
+  </div>
+</nav>
+
+
+
+<form>
 <div class="example-small-box" ngForm #registrationForm="ngForm">
   <div>
     <h1>
@@ -6,7 +38,6 @@
   </div>
   
   <div class="input-group form-group">
-    <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
     <input type="text" 
           #employeeName="ngModel"
           [(ngModel)] = "userModel.employeeName"
@@ -62,30 +93,58 @@
       <!-- <span style="color: red;margin: 0.5%;" [hidden]="!email.errors.minlength">
         Please Enter Atleast 3 Characters
       </span> -->
-      </div>
+    </div>
  
 
       <!-- Files type -->
-      <div class="input-group">
+      <div class="input-group form-group">
+        
         <input type="file"
-                accept=".png, .jpg, .jpeg"
-                class="form-control input1"
-                placeholder="file"
-                name="fileInput"
-                id="fileInput"
-                required
-                 />
+          accept=".png, .jpg, .jpeg"
+          class="form-control input1 "
+          placeholder="file"
+          name="fileInput"
+          id="fileInput"
+          #fileInput
+          aria-required="true" required="required"           
+          />
+         
+        <!-- <div *ngIf="fileInput.required && (fileInput.touched)">
+          <span style="color: red; margin: 0.5%;"[hidden]="fileInput.required">
+            email is required 
+          </span>
+        </div> -->
                 <!-- #pic="ngModel"
                 [(ngModel)] = "userModel.pic"
                 [class.is-invalid]="pic.invalid && pic.touched" -->
       </div>
 
+
+  
       <!-- Submit Button -->
       <button type="submit" 
-      class="btn btn-warning"
-      [disabled]="registrationForm.form.invalid"
-      routerLink='/login'>
-      SUBMIT
-</button>
+              class="btn btn-warning button1"
+              [disabled]="registrationForm.form.invalid"
+              
+              >
+              SUBMIT
+      </button>
+
+<!-- <form>
+  <div class="group">
+    <input type="text">
+    <label>Normal</label>
+  </div>
+  <div class="group">
+    <input type="text" required="required">
+    <label>Required</label>
+  </div>
+
+  <div class="">
+   <input type="file" #inputfile  aria-required="true" required required="required" />
+  </div>
+  <input type="submit">
+</form> -->
 
   </div>
+</form>

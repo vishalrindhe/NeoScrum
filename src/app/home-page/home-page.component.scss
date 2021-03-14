@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans:wght@700&display=swap');
+
+    .neo{
+    color: white;
+    // font-weight: 1000 !important;
+    font-size: 2.5vw;
+    // font-family:  "Balsamiq"
+    font-style: bold;
+    // text-shadow: 1px 1px #000000;
+}  
+    .scrum{
+    color: red;
+    font-size: 2.5vw;
+    font-style: bold;
+    // text-shadow: 1px 1px #000000;
+}    
+
+
+
+    @media only screen and (max-device-width : 980px)    {
+        .neo{
+            font-size: 5vh;
+        }
+        .scrum{
+            font-size: 5vh;
+        }
+    }
+    
+
+
+    @media only screen
+    and (min-device-width : 1250px)
+    and (max-device-width : 1600px) {
+         .home-page-nav{
+            margin-left: 50%;
+            }
+    }
+
+    @media only screen and (min-device-width : 1209px) and (max-device-width : 1249px) {
+        .home-page-nav{
+            margin-left: 45%;
+          }
+    }
+
+
+    @media only screen and (min-device-width : 1170px) and (max-device-width : 1208px) {
+        .home-page-nav{
+            margin-left: 45%;
+          }
+    }
+
+    @media only screen and (min-device-width : 1122px) and (max-device-width : 1169px) {
+        .home-page-nav{
+            margin-left: 30%;
+          }
+    }
+
+    @media only screen and (min-device-width : 1060px) and (max-device-width : 1121px) {
+        .home-page-nav{
+            margin-left: 25%;
+          }
+    }
+
+    @media only screen and (min-device-width : 1020px) and (max-device-width : 1059px) {
+        .home-page-nav{
+            margin-left: 10%;
+          }
+    }
+
+    @media only screen and (min-device-width : 575px)  and (max-device-width : 670px) {
+        .profilePic{
+            width:8%;
+          }
+    }
+
+    @media only screen and (min-device-width : 275px)  and (max-device-width : 570px) {
+        .profilePic{
+            width:18%;
+          }
+    }
+
+
+    .profilePic{
+        width:7%; 
+        border-radius: 50%;
+        margin: 1%;
+        border: 2px solid;
+
+    }
+
+    .grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .navbar-bg{
+        background: #0F2027;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+
+    .text-below-textarea{
+        display: grid;
+        grid-template-columns: 6fr 1fr;
+    }

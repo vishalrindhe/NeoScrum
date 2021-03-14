@@ -1,130 +1,30 @@
-<div class="container">
+<div class="container"  >
     <div class="row">
-        <div class="col-sm-6 col-lg-4 card-margin">
+        <div class="col-sm-6 col-lg-4 card-margin" *ngFor="let feedback of feedBackList">
             <div class="card border-primary card-bg" >
               <div class="text-center">
                   <img class="imgClass" src="assets/img_avatar3.png"  >           
               </div>
               <div class="card-body">
-                <h5 class="card-title text-center">Special title treatment</h5>
-                <textarea class="textinput" placeholder="  Write your feedback here..."></textarea>   
+                <h5 class="card-title text-center">{{feedback.name}}</h5>
+                <textarea class="textinput" 
+                          placeholder="  Write your feedback here..."
+                          #inputVal  
+                          (keyup)="getVal(inputVal.value)" 
+                          maxlength="100"></textarea>   
                 <div class="container text-below-textarea">
-                  <span class="card-text text-left" style="display:inline-block;text-align:left;">
-                      <small class="text-muted">Max 100 Characters</small>
-                  </span>
-                  <span class="card-text text-right" style="display:inline-block;text-align:right;">
-                      <small class="text-muted">0/100</small>
-                  </span>
-                 </div>       
-      
-              <div class="text-center">
-                <button href="#" class="btn btn-primary submit"  >Submit Feedback</button>
-              </div>
-              </div>
-            </div>
-          </div><div class="col-sm-6 col-lg-4 card-margin">
-            <div class="card border-primary card-bg" >
-              <div class="text-center">
-                  <img class="imgClass" src="assets/img_avatar3.png"  >           
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-center">Special title treatment</h5>
-                <textarea class="textinput" placeholder="  Write your feedback here..."></textarea>   
-                <div class="container text-below-textarea">
-                  <span class="card-text text-left" style="display:inline-block;text-align:left;">
-                      <small class="text-muted">Max 100 Characters</small>
-                  </span>
-                  <span class="card-text text-right" style="display:inline-block;text-align:right;">
-                      <small class="text-muted">0/100</small>
-                  </span>
-                 </div>       
-      
-              <div class="text-center">
-                <button href="#" class="btn btn-primary submit"  >Submit Feedback</button>
-              </div>
-              </div>
-            </div>
-          </div><div class="col-sm-6 col-lg-4 card-margin">
-            <div class="card border-primary card-bg" >
-              <div class="text-center">
-                  <img class="imgClass" src="assets/img_avatar3.png"  >           
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-center">Special title treatment</h5>
-                <textarea class="textinput" placeholder="  Write your feedback here..."></textarea>   
-                <div class="container text-below-textarea">
-                  <span class="card-text text-left" style="display:inline-block;text-align:left;">
-                      <small class="text-muted">Max 100 Characters</small>
-                  </span>
-                  <span class="card-text text-right" style="display:inline-block;text-align:right;">
-                      <small class="text-muted">0/100</small>
-                  </span>
-                 </div>       
-      
-              <div class="text-center">
-                <button href="#" class="btn btn-primary submit"  >Submit Feedback</button>
-              </div>
-              </div>
-            </div>
-          </div><div class="col-sm-6 col-lg-4 card-margin">
-            <div class="card border-primary card-bg" >
-              <div class="text-center">
-                  <img class="imgClass" src="assets/img_avatar3.png"  >           
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-center">Special title treatment</h5>
-                <textarea class="textinput" placeholder="  Write your feedback here..."></textarea>   
-                <div class="container text-below-textarea">
-                  <span class="card-text text-left" style="display:inline-block;text-align:left;">
-                      <small class="text-muted">Max 100 Characters</small>
-                  </span>
-                  <span class="card-text text-right" style="display:inline-block;text-align:right;">
-                      <small class="text-muted">0/100</small>
-                  </span>
-                 </div>       
-      
-              <div class="text-center">
-                <button href="#" class="btn btn-primary submit"  >Submit Feedback</button>
-              </div>
-              </div>
-            </div>
-          </div><div class="col-sm-6 col-lg-4 card-margin">
-            <div class="card border-primary card-bg" >
-              <div class="text-center">
-                  <img class="imgClass" src="assets/img_avatar3.png"  >           
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-center">Special title treatment</h5>
-                <textarea class="textinput" placeholder="  Write your feedback here..."></textarea>   
-                <div class="container text-below-textarea">
-                  <span class="card-text text-left" style="display:inline-block;text-align:left;">
-                      <small class="text-muted">Max 100 Characters</small>
-                  </span>
-                  <span class="card-text text-right" style="display:inline-block;text-align:right;">
-                      <small class="text-muted">0/100</small>
-                  </span>
-                 </div>       
-      
-              <div class="text-center">
-                <button href="#" class="btn btn-primary submit"  >Submit Feedback</button>
-              </div>
-              </div>
-            </div>
-          </div><div class="col-sm-6 col-lg-4 card-margin">
-            <div class="card border-primary card-bg" >
-              <div class="text-center">
-                  <img class="imgClass" src="assets/img_avatar3.png"  >           
-              </div>
-              <div class="card-body">
-                <h5 class="card-title text-center">Special title treatment</h5>
-                <textarea class="textinput" placeholder="  Write your feedback here..."></textarea>   
-                <div class="container text-below-textarea">
-                  <span class="card-text text-left" style="display:inline-block;text-align:left;">
-                      <small class="text-muted">Max 100 Characters</small>
-                  </span>
-                  <span class="card-text text-right" style="display:inline-block;text-align:right;">
-                      <small class="text-muted">0/100</small>
-                  </span>
+                      <span class="card-text text-left" style="display:inline-block;text-align:left;">
+                          <small class="text-muted">Max 100 Characters</small>
+                      </span>
+                  
+                        <span class="card-text text-right" style="display:inline-block;text-align:right;">
+                          <div *ngIf="currentVal.length < 80; else loggedOut">
+                            <small class="text-muted">{{currentVal.length}} /100</small>
+                          </div>
+                          <ng-template #loggedOut>
+                            <small class=" " style="color: red;"> {{currentVal.length}} /100 </small>
+                        </ng-template>
+                        </span>               
                  </div>       
       
               <div class="text-center">

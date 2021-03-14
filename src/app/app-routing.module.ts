@@ -12,7 +12,7 @@ const routes: Routes = [
   {path:'dashboard',component:DashboardComponent},
   {path:'feedback',component:FeedbackComponent},
   {path: 'homepage',component:HomePageComponent},
-  {path: '',   redirectTo: '/login', pathMatch: 'full' },
+  {path: '',   redirectTo: '/homepage', pathMatch: 'full' },
   
 ];
 

@@ -1,3 +1,35 @@
+<nav class="navbar navbar-expand-lg  navbar-dark navbar-bg">
+    
+  <a class="navbar-brand" routerLink='/dashboard'>
+      <span class="neo">
+          <b>Neo</b>
+      </span>
+      <span class="scrum">
+          <b>Scrum</b>
+      </span>
+  </a>
+          <!-- <div class="navbar-brand">
+              <img class="profilePic" src="assets/img_avatar3.png" >                       
+            <span class="" href="#">Vishal Rindhe</span>
+          </div>   -->
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+  <div class="navbar-nav home-page-nav">
+      <button type="button" class=" btn btn-outline-light my-2 mr-sm-4" routerLink="/registration">Registration</button>
+      <!-- <button type="button" class="btn btn-danger my-2 mr-sm-4 " routerLink="/login">
+          <div style="margin-left: 2%;margin-right: 2%;">Logout</div> -->
+      <!-- </button>    -->
+
+  </div>
+  </div>
+</nav>
+
+
+
+
 <div>
   
   <div class="example-small-box " style="align-items: center;" ngForm #loginForm="ngForm">
@@ -8,8 +40,10 @@
     </div> -->
     
     <div class="input-group form-group">
-      <div class="input-group " style="text-align: center;">
-        <h1 style="text-align: center;">Login</h1>
+      <div class="input-group " style="text-align: center;align-items: center;
+      justify-content: center;
+      text-align: center;">
+        <h1 class="text-center" style="text-align: center;">Login</h1>
       </div>
       <!-- <span class="input-group-text" id="basic-addon1">@</span> -->
       
@@ -70,7 +104,7 @@
 
       <!-- Submit Button -->
     <button type="submit" 
-            class="btn btn-warning"
+            class="btn btn-warning button1"
             [disabled]="loginForm.form.invalid"
             routerLink='/dashboard'
             >
