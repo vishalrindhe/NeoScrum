@@ -1,6 +1,6 @@
 <div class="container"  >
     <div class="row">
-        <div class="col-sm-6 col-lg-4 card-margin" *ngFor="let feedback of feedBackList">
+        <div class="col-sm-6 col-lg-4 card-margin" *ngFor="let feedback of feedBackList" (click)="getVal(inputVal.value)">
             <div class="card border-primary card-bg" >
               <div class="text-center">
                   <img class="imgClass" src="assets/img_avatar3.png"  >           
@@ -18,11 +18,11 @@
                       </span>
                   
                         <span class="card-text text-right" style="display:inline-block;text-align:right;">
-                          <div *ngIf="currentVal.length < 80; else loggedOut">
-                            <small class="text-muted">{{currentVal.length}} /100</small>
+                          <div *ngIf="inputVal.value.length < 80; else loggedOut">
+                            <small class="text-muted">{{inputVal.value.length}} /100</small>
                           </div>
                           <ng-template #loggedOut>
-                            <small class=" " style="color: red;"> {{currentVal.length}} /100 </small>
+                            <small class=" " style="color: red;"> {{inputVal.value.length}} /100 </small>
                         </ng-template>
                         </span>               
                  </div>       
