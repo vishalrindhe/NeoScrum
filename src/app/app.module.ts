@@ -14,6 +14,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { FeedbackWriteComponent } from './feedback-write/feedback-write.component';
 import { FeedbackCardComponent } from './feedback-card/feedback-card.component';
+import { HttpClientModule } from '@angular/common/http';
+import { DataService } from './data.service';
 
 @NgModule({
   declarations: [
@@ -34,10 +36,11 @@ import { FeedbackCardComponent } from './feedback-card/feedback-card.component';
     BrowserAnimationsModule,
     MatTabsModule,
     FormsModule,
-    ReactiveFormsModule 
+    ReactiveFormsModule,
+    HttpClientModule
     
   ],
-  providers: [],
+  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

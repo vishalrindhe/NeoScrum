@@ -19,22 +19,22 @@
 
   <div class="container">
     <div class="row">
-        <div class="col-sm-6 col-lg-4 card-margin" *ngFor="let feedback of feedBackList">
+        <div class="col-sm-6 col-lg-4 card-margin" *ngFor="let feedback of feedbacks1">
             <div class="card border-primary card-bg" >
                 <div class="card-header">
                         <div class="container text-below-textarea">
                             <span class="card-text text-left" style="display:inline-block;text-align:left;">
-                                Feedback                    
+                                {{feedback.title}}                    
                             </span>
                             <span class="card-text text-right" style="display:inline-block;text-align:right;">
-                                <small class="text-muted">in {{feedback.updated}} hours</small>
+                                <small class="text-muted">in {{feedback.id}} hours</small>
                             </span>
                         </div>  
                 </div>
-                <p class="card-text" style="padding: 9%;">{{feedback.feedback}}</p>
+                <p class="card-text" style="padding: 9%;">{{feedback.body}}</p>
 
                 <span class="card-footer text-right" style="display:inline-block;text-align:right;">
-                    <small class="text-muted">sent by - {{feedback.name}}</small>
+                    <small class="text-muted">sent by - {{feedback.userId}}</small>
                 </span>        
 
               </div>
