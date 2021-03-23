@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import feedbackDummy from '../../assets/data/feedbackDummy.json'
 import { DataService } from '../data.service';
 
@@ -11,7 +12,9 @@ export class FeedbackCardComponent implements OnInit {
   public feedBackList:{name:string,feedback:string,updated:number}[]=feedbackDummy;
   feedbacks1: any;
   feedbacks: any;
-  constructor(private data: DataService) { }
+  public user!: { userId: number; };
+
+  constructor(private data: DataService, private activatedroute: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.data.get().subscribe(
@@ -19,14 +22,17 @@ export class FeedbackCardComponent implements OnInit {
               console.log(data)
               this.feedbacks = data
               console.log();
-              this.feedbacks1 = this.feedbacks.filter((feedbacks: { userId: number; })=>feedbacks.userId==1);
+              this.feedbacks1 = this.feedbacks.filter((feedbacks: { userId: number; })=>feedbacks.userId==this.user.userId);
               console.log(this.feedbacks1);
+              console.log(this.user.userId);
+              
             })
 
-      
+
+      this.user={
+        userId:this.activatedroute.snapshot.params['userId']
+      }
      }
-     
-  
   }
 
 

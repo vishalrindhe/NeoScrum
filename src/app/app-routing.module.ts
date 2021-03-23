@@ -10,6 +10,7 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:'registration',component:RegistrationComponent},
   {path:'dashboard',component:DashboardComponent},
+  {path:'dashboard/:userId',component:DashboardComponent},
   {path:'feedback',component:FeedbackComponent},
   {path: 'homepage',component:HomePageComponent},
   {path: '',   redirectTo: '/homepage', pathMatch: 'full' },
