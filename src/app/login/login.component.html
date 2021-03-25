@@ -103,10 +103,10 @@
       </div>
 
       <!-- Submit Button -->
-    <button type="submit" 
+    <button type="button" 
             class="btn btn-warning button1"
             [disabled]="loginForm.form.invalid"
-            routerLink='/dashboard'
+            (click)="check(name.value, password.value)"
             >
             SUBMIT
     </button>

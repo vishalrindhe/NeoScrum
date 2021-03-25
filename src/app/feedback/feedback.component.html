@@ -20,7 +20,9 @@
     <div class="navbar-nav home-page-nav">
         <button type="button" class=" btn btn-outline-light my-2 mr-sm-4" routerLink="/dashboard">Back</button>
         <button type="button" class="btn btn-danger my-2 mr-sm-4 " routerLink="/login">
-            <div style="margin-left: 2%;margin-right: 2%;">Logout</div>
+            <div style="margin-left: 2%;margin-right: 2%;"
+                (click)="logout()"
+            >Logout</div>
         </button>   
 
     </div>

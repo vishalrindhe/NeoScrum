@@ -16,6 +16,7 @@ import { FeedbackWriteComponent } from './feedback-write/feedback-write.componen
 import { FeedbackCardComponent } from './feedback-card/feedback-card.component';
 import { HttpClientModule } from '@angular/common/http';
 import { DataService } from './data.service';
+import { AuthGuard } from './auth.guard';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,7 @@ import { DataService } from './data.service';
     HttpClientModule
     
   ],
-  providers: [DataService],
+  providers: [DataService, AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

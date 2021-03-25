@@ -19,7 +19,11 @@
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
   <div class="navbar-nav home-page-nav">
       <button type="button" class=" btn btn-outline-light my-2 mr-sm-4" routerLink="/feedback">Feedback</button>
-      <button type="button" class="btn btn-danger my-2 mr-sm-4 " routerLink="/login">
+      <button type="button" 
+                class="btn btn-danger my-2 mr-sm-4 " 
+                routerLink="/login"
+                (click)="logout()"
+                >
           <div style="margin-left: 2%;margin-right: 2%;">Logout</div>
       </button>   
 

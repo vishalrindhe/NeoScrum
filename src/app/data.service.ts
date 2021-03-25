@@ -14,5 +14,15 @@ export class DataService {
     let url="https://jsonplaceholder.typicode.com/posts"
     return this.http.get(url);
   }
+
+  checkusernameandpassword(uname: string, pwd : string)
+  {
+    if(uname == "admin" && pwd =="admin123"){
+      localStorage.setItem('username',"admin");
+      return true;
+    } else{
+       return false;
+      }
+  }
   
 }

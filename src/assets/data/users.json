@@ -1,0 +1,27 @@
+[
+    {
+        "name":"vishal",
+        "email":"vishal@gmail.com",
+        "password":"abcd1234"
+    },
+    {
+        "name":"anush",
+        "email":"anush@gmail.com",
+        "password":"abcd1234"
+    },
+    {
+        "name":"abc",
+        "email":"abc@gmail.com",
+        "password":"abcd1234"
+    },
+    {
+        "name":"xyz",
+        "email":"xyz@gmail.com",
+        "password":"abcd1234"
+    },
+    {
+        "name":"pqr",
+        "email":"pqr@gmail.com",
+        "password":"abcd1234"
+    }
+]
